@@ -1,0 +1,78 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[english,russian]{babel}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\makeatletter
+\tikzoption{canvas is plane}[]{\@setOxy#1}
+\def\@setOxy O(#1,#2,#3)x(#4,#5,#6)y(#7,#8,#9)%
+  {\def\tikz@plane@origin{\pgfpointxyz{#1}{#2}{#3}}%
+   \def\tikz@plane@x{\pgfpointxyz{#4}{#5}{#6}}%
+   \def\tikz@plane@y{\pgfpointxyz{#7}{#8}{#9}}%
+   \tikz@canvas@is@plane
+  }
+\makeatother  
+
+\usetikzlibrary{
+    patterns,
+    angles,
+    quotes,
+    calc, 
+    3d, 
+    backgrounds, 
+    positioning
+}
+\begin{document}
+\begin{tikzpicture}
+    %источник
+    \begin{scope}[xshift=-0.5cm]
+        \draw (0,0.5) rectangle node[above, yshift=1em] {1} ++(0.5,0.5);
+    \end{scope}
+    %поляризатор
+    \begin{scope}[xshift=0.5cm]
+        \draw (0,0.5) rectangle node[above, yshift=1em] {2} ++(0.5,0.5);
+    \end{scope}
+    \draw[magenta, line width=1pt] (0,0.80) -- ++ (0.5,0);  
+    \draw[magenta, line width=1pt] (1,0.80) -- ++ (5.5,0);  
+    \draw[blue, line width=1pt] (1,0.70) -- ++ (5.5,0);  
+    %поляризация туда
+    \begin{scope}[xshift=0cm]
+        \xdef\angle{135}
+        \draw [-,magenta, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
+        \draw [->,magenta, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+    \end{scope}  
+    %поляризация обратно
+   \begin{scope}[xshift=0cm]
+        % \draw[fill=white, dashed] (2,0.75) circle (0.25);
+        \xdef\angle{45}
+        \draw [-,blue, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
+        \draw [->,blue, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+    \end{scope}      
+    %поляризация до отражения
+    \begin{scope}[xshift=3cm]
+        % \draw[fill=white, dashed] (2,0.75) circle (0.25);
+        \xdef\angle{90}
+        \draw [-,magenta, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
+        \draw [->,magenta, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+    \end{scope}   
+    %поляризация после отражения
+    \begin{scope}[xshift=3.75cm]
+        % \draw[fill=white, dashed] (2,0.75) circle (0.25);
+        \xdef\angle{90}
+        \draw [-,blue, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
+        \draw [->,blue, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+    \end{scope}       
+    %фильтр фарадея
+    \begin{scope}[xshift=3cm]
+      \draw[fill=white] (0,0.5) rectangle node[above, yshift=1em] {3} ++(1,0.5);
+    \end{scope}  
+    %зеркало
+    \draw[blue,line width=.5pt] (6.5,0) -- ++(0,1.5);
+    \draw[pattern=north west lines, pattern color=blue, draw=none] (6.5,0) rectangle ++(0.25,1.5); 
+    %филл
+    \draw[draw=none] (0,0) -- ++(6.75,0);
+\end{tikzpicture} 
+\end{document}

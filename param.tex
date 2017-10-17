@@ -1,0 +1,40 @@
+
+\begin{axis}[
+    xlabel={},
+    ylabel={},
+    domain=400:2000,
+
+    grid=both,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor y tick num=4,
+    minor x tick num=4,
+    xtick distance=200,
+    ytick distance=5,
+    ticklabel style={font=\small,fill=white},    
+    axis lines=middle,     
+	every axis x label/.style={
+    	at={(ticklabel* cs:1.05)},
+    	anchor=west,
+	},
+	every axis y label/.style={
+    	at={(ticklabel* cs:1.05)},
+    	anchor=south,
+	},    
+	/pgf/number format/.cd,
+	set decimal separator={.}
+	use comma,
+    1000 sep={},    
+    ymin = 4,
+    % enlargelimits={abs=0.5},
+    % axis line style={latex-latex},
+    % legend pos = north west,
+    % legend pos=outer north east    
+    legend entries={{TWLTb-231/1},
+                    {TWLDyB-235/4},
+                    {TWLPB-229/1},
+                    {TWLEuB-230/6},
+                    {TZNDy-236/4}},
+    legend pos= north east,  
+
+    ]

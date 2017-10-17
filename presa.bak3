@@ -1,0 +1,242 @@
+\documentclass[10pt,pdf,hyperref={unicode}, dvipsnames]{beamer}
+\input{preambule.tex}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\let\Tiny=\tiny % решает проблему со шрифтами в TexLive
+\setbeamertemplate
+ {footline}{\color{black!40!white}\quad\hfill\insertframenumber/\inserttotalframenumber\hfill\vspace{1em}\quad} 
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\beamersetrightmargin{0.5cm}
+\beamersetleftmargin{0.5cm}
+
+\begin{document}  
+
+\title[Магнитооптическая активность теллуритных стёкол]{Исследование магнитооптических свойств теллуритных стёкол}
+\author{Сарафанов Ф.Г., Платонова М.В., Геликонова В.Г. }
+\institute{Радиофизический факультет ННГУ, 420 группа}
+\date{Нижний Новгород, 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain]
+	\centering
+	\vspace{2cm}
+	\begin{beamercolorbox}[sep=8pt,center]{title}
+		\usebeamerfont{title}\inserttitle
+	\end{beamercolorbox}
+	\vspace{0.5cm}
+	\normalsize \textbf{Работу выполнили:}\\
+	\large\insertauthor\\ 
+	\vspace{0.5cm}
+	\normalsize{\textbf{Научный руководитель:}\\}
+	\large{Яковлев А.И.}
+	\vfill
+	\small{Нижний Новгород -- 2017}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}[t]
+%   \frametitle{Содержание}
+%   \tableofcontents
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Цели и актуальность}
+\begin{frame}[t]
+	\frametitle{Цели и актуальность}
+	\textbf{Цели}\\
+	\begin{enumerate}
+		\item Исследовать магнитооптические свойства теллуритных стёкол
+		\item Определить материальную константу - постоянную Верде
+		\item Обработать результаты
+	\end{enumerate}
+	\textbf{Актуальность}\\
+	\begin{enumerate}
+		\item Теллуритные стекла обладают оптической активностью и могут быть использованы в качестве магнитооптического материала в изоляторах и вращателях Фарадея
+		\item Возможность изготовления образцов с большой апертурой
+		\item Возможность изменять постоянную Верде, меняя состав стекол
+	\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Теоретическая часть}
+\begin{frame}[t]
+	\subsection{Понятие поляризации}
+	\frametitle{Понятие поляризации}
+	Для электромагнитных волн вектора $\vec{E}$ и $\vec{B}$ перпендикулярны друг другу и вектору скорости распространения волны $\vec{V}$
+	
+	%\framesubtitle{Поляризация}
+	\textbf{Поляризация} - характеристика движения вектора $\vec{E}$
+	
+	Волна называется \textbf{линейно поляризованной}, если разность фаз амплитуд $\vec{E}$ и $\vec{B}$ равна $\pi+\pi$k
+	и \textbf{эллиптически поляризованной} во всех остальных случаях.
+	
+	\textbf{Круговая поляризация} - вариант эллиптической, при котором $\phi=\frac{\pi}{2}$
+	Зависимость напряженности поля
+	\begin{gather}
+		\begin{cases} 
+			E_x = E_1\cos\left(-kz+\omega t+ \phi_1\right) \\
+			E_y = E_2\cos\left(-kz+\omega t+ \phi_2\right) \\
+			E_z = 0
+		\end{cases}
+	\end{gather}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+	\subsection{Понятие двулучепреломления}
+	\frametitle{Понятие двулучепреломления}
+	Эффект \textbf{двулучепреломления} наблюдается в анизотропных средах (в нашей работе - теллуритных стеклах). 
+	В связи с существованием эллипсоида преломления волна при прохождении через среду распадается на две: \textbf{сферическую} (обыкновенную) и \textbf{эллипсоидальную} (необыкновенную). 
+	
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			
+			\begin{gather*}
+				n_{1,2}=\frac{c}{V_{1,2}}
+				% V_{1,2}=\frac{\lambda}{t_{1,2}}\\
+				% \alpha_{1,2}=\omega (t_{1,2}-t)
+			\end{gather*}
+			
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}[tb]
+				\centering
+				\includegraphics[width=\textwidth]{img/dvp2}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+	\subsection{Вращатели Фарадея}
+	\frametitle{Вращатель и фильтр Фарадея}
+	% \framesubtitle{Вращение плоскости поляризации}
+	\textbf{Вращатель Фарадея} - вещество, способное вращать плоскость поляризации в магнитном поле. \textbf{Изолятор Фарадея} - вещество, поворачивающее плоскость поляризации на $\frac{\pi}{4}$. В нашей работе вращателями Фарадея являются теллуритные стекла. 
+	% \vspace{1em}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{img/rot}
+		\includegraphics[width=0.8\textwidth]{img/zerc}
+	\end{center}
+	\begin{columns}
+		\hspace{2.5cm}
+		\begin{column}{0.3\textwidth}
+			
+			\textbf{1} -- источник
+			
+			\textbf{2} -- поляризатор
+			
+		\end{column}
+		\hspace{1.6cm}
+		\begin{column}{0.7\textwidth}
+			
+			\textbf{3} -- вращатель\\
+			или фильтр Фарадея
+		\end{column}
+	\end{columns}
+	% \textbf{1} -- источник
+	
+	% \textbf{2} -- поляризатор
+	
+	% \textbf{3} -- вращатель/фильтр Фарадея
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Материальная константа: постоянная Верде}
+	$V$ -- постоянная Верде -- физическая величина, характеризующая угол, на который повернется плоскость поляризации при данных длине образца и магнитном поле:
+	\begin{equation}
+		\Theta=V \int B(x)dx
+	\end{equation}
+	где $\Theta$ -- угол, на который поворачивается плоскость поляризации.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Экспериментальная часть}
+\begin{frame}
+	\subsection{Схема установки}
+	\frametitle{Схема установки}
+	\begin{figure}[tb]
+		\centering
+		\includegraphics[width=0.8\textwidth]{img/chem}
+	\end{figure}
+	\begin{columns}
+		\hspace{2.5cm}
+		\begin{column}{0.3\textwidth}
+			
+			
+			\textbf{1} -- диодный лазер\\ 
+			$\quad\lambda_1=531$ нм,\\
+			$\quad\lambda_2=658$ нм,\\
+			$\quad\lambda_3=1064$ нм
+			
+			
+			\textbf{2} -- поляризатор
+			
+		\end{column}
+		\hspace{1.6cm}
+		\begin{column}{0.7\textwidth}
+			
+			\textbf{3} -- магнит
+			
+			\textbf{4} -- призма Глана
+			
+			\textbf{5} -- фильтр
+			
+			\textbf{6} -- камера
+			
+			\textbf{7} -- образец
+		\end{column}
+	\end{columns}
+	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]
+	\subsection{Анализ результатов}
+	\frametitle{Результаты эксперимента} 
+	 \begin{columns}
+	    \begin{column}{0.4\textwidth}
+	
+	    \tikz{\draw[fill=magenta] (0,0) rectangle (0.5em,0.5em);} — \small{TWLTb-231/1 (l=25.8мм)}\\
+	    \tikz{\draw[fill=blue] (0,0) rectangle (0.5em,0.5em);} — \small{TWLDyB-235/4 (15,2мм)}\\
+	    \tikz{\draw[fill=black] (0,0) rectangle (0.5em,0.5em);} — \small{TWLPB-229/1 (22,5мм)}\\
+	    \tikz{\draw[fill=green] (0,0) rectangle (0.5em,0.5em);} — \small{TWLEuB-230/6 (20,2мм)}\\
+	    \tikz{\draw[fill=magenta!40!blue] (0,0) rectangle (0.5em,0.5em);} — \small{TZNDy-236/4 (24,7мм)}\\
+	    Лучший образец -- TZNDy-236/4\\
+	    Худший -- TWLTb-231/1
+	\end{column}
+	\begin{column}{0.6\textwidth}
+	\begin{figure}[tb]
+		\centering
+		\hspace{5em}\input{vl.tex}
+	\end{figure}
+	    \end{column}
+	\end{columns}
+
+	Длина образца, при к-й плоскость поляризации повернулась бы на $\frac{\pi}{4}$ -- 11см для волны 2мкм. При такой длине сказывается неоднородность поля $\Rightarrow$ образец некачественный и в данном магнитном поле не будет эффективным как изолятор Фарадея.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Выводы}
+\begin{frame}
+	\frametitle{Выводы}
+	В ходе этого эксперимента мы 
+	\begin{enumerate}
+		\item исследовали магнитооптические свойства теллуритных стекол
+		\item определили материальную константу -- постоянную Верде
+		\item определили лучший и худший образец
+		\item определили длину образца, при к-й теллуритное стекло стало бы изолятором Фарадея
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[plain]
+	\vspace{4cm}
+	\begin{center}
+		\Huge
+		Спасибо за внимание!
+	\end{center}
+	\vspace{2.5cm}
+	\begin{center}
+		\color{black!30!white}
+		Презентация подготовлена в издательской \\
+		системе LaTeX с использованием пакетов \\
+		PGF/TikZ и Beamer
+	\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

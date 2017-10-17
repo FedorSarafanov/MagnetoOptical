@@ -1,0 +1,5 @@
+PWD /home/lab/Загрузки/presentation
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT vl.tex
+OUTPUT vl.log

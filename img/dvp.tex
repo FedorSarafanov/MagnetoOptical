@@ -1,0 +1,49 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[english,russian]{babel}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\makeatletter
+\tikzoption{canvas is plane}[]{\@setOxy#1}
+\def\@setOxy O(#1,#2,#3)x(#4,#5,#6)y(#7,#8,#9)%
+  {\def\tikz@plane@origin{\pgfpointxyz{#1}{#2}{#3}}%
+   \def\tikz@plane@x{\pgfpointxyz{#4}{#5}{#6}}%
+   \def\tikz@plane@y{\pgfpointxyz{#7}{#8}{#9}}%
+   \tikz@canvas@is@plane
+  }
+\makeatother  
+
+\usetikzlibrary{patterns,angles,quotes}
+\usetikzlibrary{calc, 3d, backgrounds, positioning}
+\begin{document}
+\begin{tikzpicture}[
+    media/.style={font={\footnotesize\sffamily}},
+    wave/.style={
+        decorate,decoration={snake,post length=1.4mm,amplitude=2mm,
+        segment length=1mm},thick},
+    interface/.style={
+        postaction={draw,decorate,decoration={border,angle=-45,
+                    amplitude=0.3cm,segment length=1.3mm}}},
+    ]
+    \draw (0,0) -- ++(0,2);
+    \draw (2,0) -- ++(0,2);
+    \foreach \i in {0.9,0.95,...,1.1}{
+        \draw[magenta,->] (-1,\i) -- ++ (4,0);
+    };
+    \foreach \i in {0.9,0.95,...,1.1}{
+        \draw[magenta] (0,\i) -- ++ (2,\i+0.5cm);
+    };
+    \foreach \i in {0.9,0.95,...,1.1}{
+        \draw[magenta,->] (2,{\i+0.535})-- ++(1,0);
+    };
+
+    % \draw[magenta,->]
+    % \coordinate (b)  at (1,1.1);
+    % \coordinate (a)  at (2,1.1);
+    % \coordinate (c)  at (2,2.1);
+    % \draw (c) pic["$\alpha$", draw=orange, <->, angle eccentricity=1.2, angle radius=1cm]
+    % {angle=a--b--c};
+\end{tikzpicture}
+\end{document}

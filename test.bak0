@@ -1,0 +1,56 @@
+\documentclass[10pt,pdf,hyperref={unicode}, dvipsnames]{beamer}
+\input{preambule.tex}
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+\setbeamertemplate
+ {footline}{\color{black!40!white}\quad\hfill\insertframenumber/\inserttotalframenumber\hfill\vspace{1em}\quad} 
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\beamersetrightmargin{0.5cm}
+\beamersetleftmargin{0.5cm}
+\title[Магнитооптическая активность теллуритных стёкол]{Исследование магнитооптических свойств теллуритных стёкол}
+\author{Сарафанов Ф.Г., Платонова М.В., Геликонова В.Г. }
+\institute{Радиофизический факультет ННГУ, 420 группа}
+\date{Нижний Новгород, 2017} 
+
+\begin{document}  
+	\begin{frame}[plain]
+	    \centering
+	    \vspace{2cm}
+	    \begin{beamercolorbox}[sep=8pt,center]{title}
+	\usebeamerfont{title}\inserttitle
+	    \end{beamercolorbox}
+	    \vspace{0.5cm}
+	    \normalsize \textbf{Работу выполнили:}\\
+	    \large\insertauthor\\
+	    \vspace{0.5cm}
+	    \normalsize{\textbf{Научный руководитель:}\\}
+	    \large{Яковлев А.И.}
+	    \vfill
+	    \small{Нижний Новгород -- 2017}
+	\end{frame}
+	\begin{frame}
+	    \centering
+	    \vspace{2cm}
+	    \begin{beamercolorbox}[sep=8pt,center]{title}
+	        \usebeamerfont{title}\inserttitle
+	    \end{beamercolorbox}
+	    \vspace{0.5cm}
+	    \normalsize \textbf{Работу выполнили:}\\
+	    \large\insertauthor\\
+	    \vspace{0.5cm}
+	    \normalsize{\textbf{Научный руководитель:}\\}
+	    \large{Яковлев А.И.}
+	    \vfill
+	    \small{Нижний Новгород -- 2017}
+	\end{frame}
+
+% 	\begin{frame}[t]
+%   \frametitle{Содержание}
+%   \tableofcontents
+% \end{frame}
+
+\end{document}
