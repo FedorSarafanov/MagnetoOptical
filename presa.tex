@@ -75,7 +75,7 @@
 \begin{frame}[t]
 	\subsection{Понятие поляризации}
 	\frametitle{Понятие поляризации}
-	Для электромагнитных волн вектора $\vec{E}$ и $\vec{B}$ перпендикулярны друг другу и волновому вектору $\vec{k}$
+	% Для электромагнитных волн вектора $\vec{E}$ и $\vec{B}$ перпендикулярны друг другу и волновому вектору $\vec{k}$
 	%\framesubtitle{Поляризация}
 	\textbf{Поляризация} - НОРМАЛЬНОЕ ОПРЕДЕЛЕНИЕ	
 	\begin{gather}
@@ -85,7 +85,7 @@
 			E_z = 0
 		\end{cases}
 	\end{gather}
-	ЧТО ТАКОЕ ОМЕГА К И ФИ ПОКАЗАТЬ НА РИСУНКЕ И РАСШИФРОВКА
+	% ЧТО ТАКОЕ ОМЕГА К И ФИ ПОКАЗАТЬ НА РИСУНКЕ И РАСШИФРОВКА
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{img/e}
 	\end{center}
@@ -94,19 +94,28 @@
 \begin{frame}
 \subsection{Понятие поляризации}
 	\frametitle{Понятие поляризации}
-Если из уравнений вида 
-	\begin{gather}
-		\begin{cases} 
-			E_x = E_1\cos\left(-kz+\omega t\right) \\
-			E_y = E_2\cos\left(-kz+\omega t+\delta\right) \\
-			E_z = 0
-		\end{cases}
-	\end{gather}
-исключить время, то получится
-СДЕЛАТЬ ВЫВОД ЧТО ТАКОЕ ДЕЛЬТА НАПИСАТЬ УМЕТЬ ВЫВОДИТЬ ВСЕМ
-\begin{gather}
-\frac{(E_x)^2}{(E_1)^2}-\frac{2E_xE_y}{(E_1E_2)}cos(\delta)+\frac{(E_y)^2}{(E_2)^2}=sin^2(\delta)
-\end{gather}
+Рассмотрим уравнение волны: 
+\begin{gather*} 
+\begin{cases} 
+E_x = E_1\cos\left(-kz+\omega t+\varphi_1\right) \\ 
+E_y = E_2\cos\left(-kz+\omega t+\varphi_2\right) \\ 
+E_z = 0 
+\end{cases} 
+\end{gather*} 
+Исключим из них время. Для этого 
+\begin{enumerate} 
+\item % 
+$\frac{E_x}{E_1}=\cos(-{k}{z}+\omega t)\cos\varphi_1-\sin(-kz+\omega t)\sin\varphi_1$\\ %(*) 
+$\frac{E_y}{E_2}=\cos(-kz+\omega t)\cos\varphi_2-\sin(-kz+\omega t)\sin\varphi_2$ %(**) 
+\item %Умножив выражение (*) на $\cos\varphi_2$ и (**) на $\cos\varphi_1$ после вычитания из первого равенства второго, получим: 
+$\frac{E_x}{E_1}\cos\varphi_2-\frac{E_y}{E_2}\cos\varphi_1=\sin(-kz+\omega t)\sin(\varphi_2-\varphi_1)$ 
+\item %Теперь умножим выражение (*) на $\sin\varphi_2$ , а (**) на $\sin\varphi_1$ и также вычтем з первого равенства второе 
+$\frac{E_x}{E_1}\sin\varphi_2-\frac{E_y}{E_2}\sin\varphi_1=\sin(-kz+\omega t)\sin(\varphi_2-\varphi_1)$ 
+\item %Возведя в квадрат и сложив почленно последние два уравнения, получим уравнение траектории 
+$\frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos(\varphi_2-\varphi_1)+\frac{E_y^2}{E_2^2}=\sin(\varphi_2-\varphi_1)$, 
+$\varphi_2-\varphi_1=\delta$ 
+\item $\frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos\delta+\frac{E_y^2}{E_2^2}=\sin^2\delta$ 
+\end{enumerate} 
 
 А это уравнение эллипса.
 
@@ -233,28 +242,18 @@
 	\begin{columns}
 		\hspace{2.5cm}
 		\begin{column}{0.3\textwidth}
-			
-			
 			\textbf{1} -- диодный лазер\\ 
 			$\quad\lambda_1=531$ нм,\\
 			$\quad\lambda_2=658$ нм,\\
-			$\quad\lambda_3=1064$ нм
-			
-			
+			$\quad\lambda_3=1064$ нм\\
 			\textbf{2} -- поляризатор
-			
 		\end{column}
 		\hspace{1.6cm}
 		\begin{column}{0.7\textwidth}
-			
-			\textbf{3} -- магнит
-			
-			\textbf{4} -- призма Глана
-			
-			\textbf{5} -- фильтр
-			
-			\textbf{6} -- камера
-			
+			\textbf{3} -- магнит\\
+			\textbf{4} -- призма Глана\\
+			\textbf{5} -- фильтр\\
+			\textbf{6} -- камера\\
 			\textbf{7} -- образец
 		\end{column}
 	\end{columns}
@@ -334,7 +333,8 @@
 	% \begin{column}{0.6\textwidth}
 	\begin{figure}[tb]
 		\centering
-		\hspace{5em}\input{vl.tex}
+		% \hspace{5em}\input{vl.tex}
+		\includegraphics[width=1\textwidth]{images/graph_verde_from_lambda}
 	\end{figure}
 	ПОДПИСАТЬ ДЛИНЫ И СОСТАВЫ ОБРАЗЦОВ
 	ДОБАВИТЬ СЮДА ОЦЕНКУ И УБРАТЬ ОТТУДА ТЕКСТ
@@ -386,6 +386,10 @@
 		PGF/TikZ и Beamer
 	\end{center}
 \end{frame}
+
+% \begin{frame}[t]
+	
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

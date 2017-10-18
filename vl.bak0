@@ -1,0 +1,97 @@
+%!TEX root = presa.tex
+  \begin{tikzpicture}[scale=1.1]
+  \begin{axis}[
+    xlabel={$\lambda$, нм},
+    ylabel={$V, \frac{\text{рад}}{\text{Тл}\cdot\text{м}}$},
+    domain=400:2000,
+    grid=both,
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!50},
+    minor y tick num=4,
+    minor x tick num=4,
+    xtick distance=200,
+    ytick distance=5,
+    ymin = 4,
+    % enlargelimits={abs=0.5},
+    axis line style={latex-latex},
+    ticklabel style={font=\small,fill=white},    
+    axis lines=middle,     
+    % legend pos = north west,
+    legend entries={{TWLTb-231/1},
+                    {TWLDyB-235/4},
+                    {TWLPB-229/1},
+                    {TWLEuB-230/6},
+                    {TZNDy-236/4}},
+    % legend pos=outer north east    
+    legend pos= north east,  
+every axis x label/.style={
+    at={(ticklabel* cs:1.05)},
+    anchor=west,
+},
+every axis y label/.style={
+    at={(ticklabel* cs:1.05)},
+    anchor=south,
+},    
+   /pgf/number format/.cd,
+        use comma,
+        1000 sep={}]
+    % legend style={
+    % at={(0,0)},
+    % anchor=north east,at={(axis description cs:0,-0.1)}},
+    % ]
+
+  \addlegendimage{mark=square*,color=magenta}
+  \addlegendimage{mark=*,color=blue,dashed}
+  \addlegendimage{mark=otimes,color=black}
+  \addlegendimage{mark=triangle*,color=red}
+  \addlegendimage{mark=diamond*,color=magenta!40!blue}
+
+  \xdef\A{1.163e+04}
+  \xdef\B{0.6811}
+  \xdef\C{0.09754}
+
+  \addplot[magenta]{1/x*(\A+\B/(x^2-\C^2))};    
+    \addplot[color=magenta, draw=none,mark=square*] coordinates {
+    (531,22.8)
+    (658,13.24)
+    (1064,9.36)
+  };
+ \xdef\A{1.35e+04} 
+\xdef\B{0.5606} 
+\xdef\C{0.9575} 
+  \addplot[blue,dashed]{1/x*(\A+\B/(x^2-\C^2))};    
+    \addplot[color=blue, draw=none,mark=*] coordinates {
+    (531,31.74)
+    (658,15.25)
+    (1064,5.48)
+  };  
+\xdef\A{1.219e+04} 
+\xdef\B{0.1984} 
+\xdef\C{0.9706} 
+  \addplot[black]{1/x*(\A+\B/(x^2-\C^2))};    
+    \addplot[color=black, draw=none,mark=otimes] coordinates {
+    (531,24.3)
+    (658,14.05)
+    (1064,10.36)
+  };  
+\xdef\A{1.469e+04} 
+\xdef\B{0.4854} 
+\xdef\C{0.8003} 
+  \addplot[red]{1/x*(\A+\B/(x^2-\C^2))};    
+    \addplot[color=red, draw=none,mark=triangle*] coordinates {
+    (531,29.58)
+    (658,17.12)
+    (1064,12.79)
+  };   
+\xdef\A{1.679e+04} 
+\xdef\B{0.4218} 
+\xdef\C{0.9157}
+  \addplot[magenta!40!blue]{1/x*(\A+\B/(x^2-\C^2))};    
+    \addplot[color=magenta!40!blue, draw=none,mark=diamond*] coordinates {
+    (531,30.77)
+    (658,19.68)
+    (1064,11.69)
+  };        
+
+  \end{axis}
+\end{tikzpicture}    
