@@ -29,7 +29,7 @@
     \pgfmathsetmacro{\c}{sqrt(\a^2-\b^2)}%
 
 
-    % \draw[dashed, black!40] (1.31,0) -- ++(0,0.76);
+    % \draw[dashed, black!40] (1.311,0) -- ++(0,0.76);
 % 
     % \draw[black, thick] (1.31,-.1) node[below,xshift=0.35em] {$n_{ellipse}$} -- ++(0,0.2);
 
@@ -41,9 +41,9 @@
         plot ({\phi}:{\p/(1-\e*cos(\phi))});
 
     \begin{scope}[rotate around={30:(0,0)}]
-        \draw[blue,->, thick] (0,0) -- (1.5,0) node[above, xshift=1em] {$\vec{E}$};
-        \draw[blue, thick] (1,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n_0$} -- ++(0,0.2);
-        \draw[blue, thick] (1.5,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n$} -- ++(0,0.2);
+        \draw[black,->, thick] (0,0) -- (1.5,0) node[above, xshift=1em] {$\vec{E}$};
+        \draw[black, thick] (1,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n_0$} -- ++(0,0.2);
+        \draw[black, thick] (1.5,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n$} -- ++(0,0.2);
 
     \end{scope}
 
@@ -55,9 +55,8 @@
     % node [above, black] {$n,$}
     % node [above right] {$\vec{E}$};
 
-    \draw[blue,->,thick] (0,0) -- ++(1.31,0);
-    \draw[blue,->,thick] (0,0) -- ($(30:1.5)+(-{1.5*cos(30)},0)$);
-% 
+    \draw[black,->,thick] (0,0) -- ++(1.31,0);
+    \draw[black,->,thick] (0,0) -- ($(30:1.5)+(-{1.5*cos(30)},0)$);
 
     \draw[black,thick] (2,-.1) node[right,yshift=-0.5em] {$n_1$} -- ++(0,0.2);
     \draw[black, thick] (-.1,1) node[above, xshift=-0.7em] {$n_0$} -- ++(0.2,0);    
