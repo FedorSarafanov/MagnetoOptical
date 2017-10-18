@@ -48,16 +48,10 @@
     % \draw[thin,samples=200,domain=0:360,smooth, xshift=-{\c}cm,variable=\phi,magenta]%
         % plot ({\phi}:{\p/(1-\e*cos(\phi))});
 
-        \draw[black,->, thick] (0,0) -- (1,1) node[above, xshift=1em] {$\vec{E}$};
+    \draw[black,->, thick] (0,0) -- (1,1) node[above, xshift=1em] {$\vec{E}$};
     \draw[dashed, black!50] (1,0) -- (1,1);
     \draw[dashed, black!50] (0,1) -- (1,1);
-    \begin{scope}[rotate around={30:(0,0)}]
-        % \draw[blue, thick] (1,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n_0$} -- ++(0,0.2);
-        % \draw[blue, thick] (1.5,-0.1)  node[left, xshift=-0.3em, yshift=0.3em] {$n$} -- ++(0,0.2);
 
-    \end{scope}
-
-    % \draw
     \draw[black,->, thin] (0,0) -- (1.5,0) node [right] {$E_x$};
     \draw[black,->, thin] (0,0) -- (0,1.5) node [above] {$E_y$};
 
@@ -85,7 +79,8 @@
     }
 
     \path[] (3.14/4,0) -- (3.14/4, {sin(2.0*3.14/4 r)}) node[above] {$\vec{E}$};
-    \draw (3,1) node[above] {$k=\frac{2\pi}{\lambda}$};
+    \draw (3,1.2) node[above] {$k=\frac{2\pi}{\lambda}$};
+    \draw (3,0.7) node[above] {$\omega=2\pi\nu$};
 
     \lineann[-1.5]{0}{3.14}{$\lambda$}
     \end{scope}
