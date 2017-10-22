@@ -1,0 +1,41 @@
+\documentclass[tikz]{standalone}
+
+\usepackage[english,russian]{babel}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage
+    {
+        tikz,
+        pgfplots,
+        verbatim,
+        tikz-3dplot
+    }
+\usetikzlibrary
+    {
+        arrows,
+        patterns,
+        angles,
+        quotes,
+        calc, 
+        3d, 
+        backgrounds, 
+        positioning,
+        babel
+    }
+\tikzset{
+    axis/.style={dashed,black!80},
+    light axis/.style={dashed,black!50},
+    vec line/.style={solid, thick, blue},
+    vec/.style={solid, thick, blue,-latex},
+}
+
+\begin{document}
+            \begin{tikzpicture}
+                \draw[black,-latex, thick] (0,0) -- (1,0.71) node[above, xshift=0em] {$\vec{E}$};
+                \draw[black,-latex, thick] (0,0) -- (130:1);
+                \draw[thick] (0,0) circle (1);
+                \draw[thick] (0,0) ellipse (1.4 and 1);         
+                \draw[black,->, thin] (-1.5,0) -- (1.5,0) node [right] {$E_x$};
+                \draw[black,->, thin] (0,-1.5) -- (0,1.5);
+            \end{tikzpicture}
+\end{document}
