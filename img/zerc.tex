@@ -17,6 +17,7 @@
 \makeatother  
 
 \usetikzlibrary{
+    babel,
     patterns,
     angles,
     quotes,
@@ -51,6 +52,20 @@
         \xdef\angle{45}
         \draw [-,blue, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
         \draw [->,blue, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+   
+   \draw[dashed] (2,0.75) -- ++ (135:0.75);
+    \draw[dashed] (1.5,0.75) coordinate (a) node[right] {}
+    -- (2,0.75) coordinate (b) node[left] {}
+    -- (2,0.75)++(135:1) coordinate (c) node[above right] {}
+    pic["$\varphi_0$", draw=black, <-, solid, angle eccentricity=1.7, angle radius=0.4cm]
+    {angle=c--b--a};
+
+   \draw[dashed] (2,0.75) -- ++ (45:0.75);
+    \draw[dashed] (1.5,0.75) coordinate (a) node[right] {}
+    -- (2,0.75) coordinate (b) node[left] {}
+    -- (2,0.75)++(45:1) coordinate (c) node[above right] {}
+    pic["$\varphi_0+\frac{\pi}{2}$", draw=black, <-, solid, angle eccentricity=1.6, angle radius=0.47cm]
+    {angle=c--b--a};
     \end{scope}      
     %поляризация до отражения
     \begin{scope}[xshift=3cm]
@@ -60,15 +75,28 @@
         \draw [->,magenta, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
     \end{scope}   
     %поляризация после отражения
-    \begin{scope}[xshift=3.75cm]
+    \begin{scope}[xshift=3.15cm]
         % \draw[fill=white, dashed] (2,0.75) circle (0.25);
         \xdef\angle{90}
         \draw [-,blue, line width=1pt] (2,0.75) -- ++({180+\angle}:0.3);
         \draw [->,blue, line width=1pt] (2,0.75) -- ++({\angle}:0.3);
+
+    \draw[dashed] (2,1.75) coordinate (a) node[right] {}
+    -- (2,0.75) coordinate (b) node[left] {}
+    -- (2,0.75)++(180:1) coordinate (c) node[above right] {}
+    pic["$\varphi_0+\frac{\pi}{4}$", draw=black, <-, solid, angle eccentricity=2.1, angle radius=0.4cm]
+    {angle=a--b--c};
     \end{scope}       
     %фильтр фарадея
-    \begin{scope}[xshift=3cm]
-      \draw[fill=white] (0,0.5) rectangle node[above, yshift=1em] {3} ++(1,0.5);
+    % \begin{scope}[xshift=3cm]
+    %   \draw[fill=white] (0,0.5) rectangle node[above, yshift=1em] {3} ++(1,0.5);
+    % \end{scope}  
+    \begin{scope}[xshift=3cm, yshift=0.75cm]
+      \draw[line width=3pt] (0,-0.25) -- ++ (1,0);
+      \draw[line width=3pt] (0,0.25) -- node[above, yshift=0.2em] {3}  ++ (1,0);
+      % \draw[magenta, line width=1pt] (0,0) -- (1,0);
+      \draw[fill=white] (0.1,-0.1) rectangle ++ (0.8,0.2);
+      % \draw[magenta!30, line width=1pt] (0.1,1pt) --++ (0.8,0);
     \end{scope}  
     %зеркало
     \draw[blue,line width=.5pt] (6.5,0) -- ++(0,1.5);

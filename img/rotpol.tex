@@ -57,8 +57,8 @@
         \draw[black,->, thick] (0,0) -- (1,1) node[above, xshift=1em] {$\vec{E}$};
         \draw[dashed, black!50] (1,0) -- (1,1);
         \draw[dashed, black!50] (0,1) -- (1,1);
-        \draw[black,->, thin] (0,0) -- (1.5,0) node [right] {$+x$};
-        \draw[black,->, thin] (0,0) -- (0,1.5) node [above] {$+y$};
+        \draw[black,->, thin] (0,0) -- (1.5,0) node [right] {$x$};
+        \draw[black,->, thin] (0,0) -- (0,1.5) node [above] {$y$};
 
         \draw[black,-,thick] (0,0) -- ++(1,0);
         \draw[black,-,thick] (0,0) -- ++(0,1);
@@ -75,8 +75,8 @@
         \draw[dashed, black!50] (0,{1/2*sqrt(2)}) -- (30:{sqrt(2)});
         \draw[dashed, black!50] ({sqrt(3)/2*sqrt(2)},0) -- (30:{sqrt(2)});
         % \draw[dashed, black!50] (0,1) -- (30:{sqrt(2)});
-        \draw[black,->, thin] (0,0) -- (1.5,0) node [right] {$+x$};
-        \draw[black,->, thin] (0,0) -- (0,1.5) node [above] {$+y$};
+        \draw[black,->, thin] (0,0) -- (1.5,0) node [right] {$x$};
+        \draw[black,->, thin] (0,0) -- (0,1.5) node [above] {$y$};
 
         \draw[black,-,thick] (0,0) -- ++({sqrt(3)/2*sqrt(2)},0);
         \draw[black,-,thick] (0,0) -- ++(0,{sqrt(1)/2*sqrt(2)});
@@ -95,10 +95,17 @@
         \draw [-,magenta, line width=1pt] (2,0.75) -- ++({180+\angle}:0.25);
         \draw [->,magenta, line width=1pt] (2,0.75) -- ++({\angle}:0.25);
     \end{scope}    
-
-    \begin{scope}[xshift=3cm]
-      \draw (0,0.5) rectangle node[above, yshift=1em] {} ++(1,0.5);
+    \begin{scope}[xshift=3cm, yshift=0.75cm]
+      \draw[line width=3pt] (0,-0.25) -- ++ (1,0);
+      \draw[line width=3pt] (0,0.25) -- node[above, yshift=0.2em] {}  ++ (1,0);
+      \draw[magenta, line width=1pt] (0,0) -- (1,0);
+      \draw[fill=white] (0.1,-0.1) rectangle ++ (0.8,0.2);
+      % \draw[magenta!30, line width=1pt] (0.1,0) -- (0.9,0);
     \end{scope}  
+
+    % \begin{scope}[xshift=3cm]
+    %   \draw (0,0.5) rectangle node[above, yshift=1em] {} ++(1,0.5);
+    % \end{scope}  
 
 
 
