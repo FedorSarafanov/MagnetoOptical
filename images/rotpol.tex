@@ -91,14 +91,20 @@
     % \begin{scope}[xshift=0.5cm]
         % \draw (0,0.5) rectangle node[above, yshift=1em] {2} ++(0.5,0.5);
     % \end{scope}
-    % \draw[magenta, line width=1pt] (0,0.75) -- ++ (0.5,0);      
+    % \draw[magenta, line width=1pt] (0,0.75) -- ++ (0.5,0);  
+    \begin{scope}[xshift=1.5cm]
+        
+    \draw[yshift=0.75cm,->, dashed] (-1.5,0) -- ++(0.6,0) node[right] {$z$};
+    \draw[yshift=0.75cm,->, dashed] (-1.5,0) -- ++(0,0.6) node[above] {$y$};
+    \draw[yshift=0.75cm,->, dashed] (-1.5,0) node [solid, fill=white] {$\bigotimes$} node[below, yshift=-0.5em] {$x$};        
+    \end{scope}
 
     \draw[magenta, line width=1pt] (1,0.75) -- ++ (1,0);  
     \draw[magenta, line width=1pt] (2,0.75) -- ++ (1,0);  
     \draw[magenta, line width=1pt] (4,0.75) -- ++ (2.5,0);  
 
-    \polarize[magenta]{2}{30}{\varphi_1}
-    \polarize[magenta]{5}{50}{\varphi_2}
+    \polarize[magenta]{2}{50}{\varphi_1}
+    \polarize[magenta]{5}{30}{\varphi_2}
 
     \polvec{2}{60}
     \polvec{5}{40}
