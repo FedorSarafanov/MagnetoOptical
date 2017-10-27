@@ -45,6 +45,9 @@
 	\draw[color=orange, thick] (0,0,0)
 	-- (xyz spherical cs:radius=8,longitude=-45,latitude=-85) coordinate (*);
 	
+	\draw[color=black, thick,->] (xyz spherical cs:radius=8,longitude=-45,latitude=-85) -- (xyz spherical cs:radius=6,longitude=-45,latitude=-85) node [above] {$\vec{k}$};
+	
+
 	\begin{scope}[
 			canvas is xz plane at y=0
 		]

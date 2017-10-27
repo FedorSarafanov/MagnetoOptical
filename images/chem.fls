@@ -264,7 +264,13 @@ INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT ../data/b_x.csv
 INPUT /home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0500.tfm
+INPUT 1.jpg
+INPUT ./1.jpg
 OUTPUT chem.pdf
+INPUT ./1.jpg
+INPUT 2.jpg
+INPUT ./2.jpg
+INPUT ./2.jpg
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT chem.aux
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc

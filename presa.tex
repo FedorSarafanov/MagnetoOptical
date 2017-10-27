@@ -50,7 +50,7 @@
 	\end{enumerate}
 	\textbf{Актуальность}\\
 	\begin{enumerate}
-		\item Теллуритные стекла обладают оптической активностью и могут быть использованы в качестве магнитооптического материала в изоляторах и вращателях Фарадея
+		\item Теллуритные стекла обладают магниоптической активностью и могут быть использованы в изоляторах и вращателях Фарадея
 		\item Теллуритные стекла обладают широким спектром пропускания (0.4--5.5  мкм) %(спектр)
 		\item Возможно изготовление образцов с большой апертурой (до 10 см)
 		% \item Из теллуритных стекол возможно изготовление волокон
@@ -149,7 +149,7 @@
 		\item В магнитном поле у вещества существуют \textbf{собственные частоты} ($\omega_0\pm\Omega$),
 		      и по Френелю это и есть причина поворота поляризации: сложение двух таких циркулярно поляризованных волн даст волну с повернутой линейной поляризацией
 		      \begin{equation*}
-			      \Theta=\frac{\pi L}{\lambda}(n_--n_+)
+			      \Theta=\frac{\pi L}{\lambda}(n_L-n_R)
 		      \end{equation*}
 		\item \textbf{Эффект Фарадея} заключается в возникновении кругового двулучепреломления в изначально изотропных средах при \\помещении их в магнитное поле.
 	\end{enumerate}
@@ -161,9 +161,9 @@
 	\frametitle{Материальная константа: постоянная Верде}
 	$V$ -- \textbf{постоянная Верде} -- физическая величина, характеризующая угол, на который повернется плоскость поляризации при данных длине образца и магнитном поле:
 	% КАРТИНКА: нарисовать плоскость поляризации и угол, на к-й она поворачивается
-	\begin{equation}
+	\begin{equation*}
 		\Theta=\varphi_2-\varphi_1=V \int B(z)dz
-	\end{equation}
+	\end{equation*}
 	где $\Theta$ -- угол, на который поворачивается плоскость поляризации.
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]{images/rotpol}
@@ -209,7 +209,7 @@
 	\frametitle{Схема установки}
 	\begin{figure}[tb]
 		\centering
-		\includegraphics[width=0.8\textwidth]{images/chem}
+		\includegraphics[width=1\textwidth]{images/chem}
 	\end{figure}
 	\begin{columns}
 		\hspace{2.5cm}
@@ -236,7 +236,7 @@
 \begin{frame}
 	\subsection{Аппроксимация распределения магнитного поля}
 	\frametitle{Аппроксимация распределения магнитного поля}
-	Мы аппроксимировали полученное распределение $B(z)$ с помощью кривой Гаусса:\vspace{-1em}
+	Аппроксимация распределение $B(z)$ с помощью кривой Гаусса:\vspace{-1em}
 	\begin{columns}
 		\begin{column}{0.6\textwidth}
 			\begin{center}
@@ -277,18 +277,20 @@
 \begin{frame}[t]
 	\subsection{Анализ результатов}
 	\frametitle{Результаты эксперимента}
-	\vspace{-1em}
-	\begin{equation*}
-		V=\frac{1}{\lambda}\left(
-		A+\frac{B}{\lambda^2-\lambda_0^2}
-		\right)
-	\end{equation*}
+
 	\vspace{-1em}
 	\begin{figure}[tb]
 		\centering
-		\includegraphics[width=1\textwidth]{images/graph_verde_from_lambda}
+		\includegraphics[width=1\textwidth]{images/graph_verde_from_lambda2}
 	\end{figure}
-	
+	\vspace{-1em}
+	\begin{equation*}
+		V=
+		% \frac{1}{\lambda}\left(
+		% A+
+		\frac{A}{\lambda^2-\lambda_0^2}
+		% \right)
+	\end{equation*}	
 	\textbf{Оценка} образца TZNDy-236/4: Для поворота на $\Theta=\frac{\pi}{4}$ при $B=3.5$ Тл и длине волны $\lambda=1800$ нм нужен образец длиной 2 см.
 	
 	% Для оценки был выбран образец с наибольшей материальной константой, так как он на наибольший угол поворачивает плоскость поляризации.
@@ -303,7 +305,7 @@
 \section{Выводы}
 \begin{frame}
 	\frametitle{Выводы}
-	В этой работе 
+	% В этой работе 
 	\begin{enumerate} 
 		\item 
 			  Ознакомились с принципом работы вращателей и изоляторов Фарадея

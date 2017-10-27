@@ -492,9 +492,9 @@ INPUT ./images/chem.pdf
 INPUT images/b_from_z.pdf
 INPUT ./images/b_from_z.pdf
 INPUT ./images/b_from_z.pdf
-INPUT images/graph_verde_from_lambda.pdf
-INPUT ./images/graph_verde_from_lambda.pdf
-INPUT ./images/graph_verde_from_lambda.pdf
+INPUT images/graph_verde_from_lambda2.pdf
+INPUT ./images/graph_verde_from_lambda2.pdf
+INPUT ./images/graph_verde_from_lambda2.pdf
 INPUT /home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/lass2488.tfm
 OUTPUT presa.nav
 OUTPUT presa.toc

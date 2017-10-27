@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.10.8)  25 OCT 2017 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.10.8)  27 OCT 2017 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Here is how much of TeX's memory you used:
  24904 strings out of 492990
  632123 string characters out of 6138688
- 815866 words of memory out of 5000000
+ 815840 words of memory out of 5000000
  28018 multiletter control sequences out of 15000+600000
  9540 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -675,7 +675,7 @@ ist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on graph_verde_from_lambda2.pdf (1 page, 98711 bytes).
+Output written on graph_verde_from_lambda2.pdf (1 page, 97319 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1508955345 "chem.tex" "chem.pdf" "chem" 1508955346
+["pdflatex"] 1509120187 "chem.tex" "chem.pdf" "chem" 1509120188
   "../data/b_x.csv" 1508668237 1658 ea028dfd030648675e60bcb7b29e4b30 ""
-  "/dev/null" 1508953733 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1509108829 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0500.tfm" 1480795210 3252 bc0f8cc163ba94bbce20e59f671a255d ""
   "/home/lab/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1000.tfm" 1480795085 3220 0e417eaf233b160335902e97259a6c77 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1501615451 3141 82d5616418ed8d5de703b3951bedecb4 ""
@@ -174,11 +174,13 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1501615481 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1507458674 2249863 4167f86e1bc615259ae150a760e3750c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1507458661 7735972 1d2da459cdf2f462a2425149800a93d7 ""
-  "chem.aux" 1508955346 186 d84bf62585b18c5b92804f4b0a9189f3 ""
-  "chem.tex" 1508955345 4044 6d3bf1811b60b35462336b4384edd317 ""
+  "1.jpg" 1509109536 13612 8e578a3b6a0341798c5b8091d031e8a4 ""
+  "2.jpg" 1509109538 22194 e120249a321d132747d8bd3dc73bb161 ""
+  "chem.aux" 1509120188 186 d84bf62585b18c5b92804f4b0a9189f3 ""
+  "chem.tex" 1509120187 4309 07e49f20fbf17c7dcd21a0bc352ec89d ""
   (generated)
-  "/home/osabio/laser/images/chem.pdf"
-  "chem.log"
   "chem.pdf"
-  "chem.aux"
+  "/home/osabio/laser/images/chem.pdf"
   "/home/osabio/laser/images/chem.log"
+  "chem.aux"
+  "chem.log"
