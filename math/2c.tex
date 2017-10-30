@@ -1,0 +1,161 @@
+\documentclass[a5paper,14pt]{article}
+
+% \usepackage{mdframed}
+
+\usepackage{geometry}
+\usepackage[english, russian]{babel}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+	\usepackage
+	{
+			amssymb,
+		amsfonts,
+		amsmath,
+		amsthm,
+		wrapfig,
+		% makecell,
+		% multirow,
+		indentfirst,
+		% ulem,
+		% subcaption,
+		% float,
+		% caption,
+		% csvsimple,
+		color,
+		% booktabs,
+		% pgfplots,
+		% pgfplotstable,
+		% fancyhdr,
+		cmap,
+	}  
+\begin{document} %Прости за ужасную картинку.е
+	Для простоты предположим, что начальная фаза волны равна нулю.
+	\begin{gather*}
+		\begin{cases} 
+			E_x = A\cos(\xi)\cos\left(-kz+\omega t\right) \\
+			E_y = A\sin(\xi)\cos\left(-kz+\omega t\right)
+			 % \\+ \phi_2\right
+			% E_z = 0
+		\end{cases}
+		% \quad\Rightarrow\quad
+		% \frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos\delta+\frac{E_y^2}{E_2^2}=\sin^2\delta
+	\end{gather*}
+	Предположим, что поворот плоскости поляризации линейно зависит от $z$:
+	\begin{equation*}
+		\xi=-\alpha z
+	\end{equation*}
+	% \begin{equation*}
+	% 	\cos x \cos y = \frac12 \left[
+	% 		\cos (x-y)+
+	% 		\cos (x+y)
+	% 	\right]
+	% \end{equation*}
+	% \begin{equation*}
+	% 	\sin x \cos y = \frac12 \left[
+	% 		\sin (x+y)+
+	% 		\sin (x-y)
+	% 	\right]
+	% \end{equation*}
+	\begin{gather*}
+		\begin{cases} 
+			E_x = \frac{A}{2}\left[
+				\cos\left(
+					\xi+kz-\omega t
+				\right)+
+				\cos\left(
+					\xi-kz+\omega t
+					\right)
+			.\right] \\
+			E_y = \frac{A}{2}\left[
+				\sin\left(
+					\xi-kz+\omega t
+				\right)+
+				\sin\left(
+					\xi+kz-\omega t
+					\right)
+			\right]
+			 % \\+ \phi_2\right
+			% E_z = 0
+		\end{cases}
+		% \quad\Rightarrow\quad
+		% \frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos\delta+\frac{E_y^2}{E_2^2}=\sin^2\delta
+	\end{gather*}
+	\begin{gather*}
+		\begin{cases} 
+			E_x = \frac{A}{2}\left[
+				\cos\left(
+					-z(k-\alpha)+\omega t
+				\right)+
+				\cos\left(
+					-z(k+\alpha)+\omega t
+					\right)
+			\right] \\
+			E_y = \frac{A}{2}\left[
+				\cos\left(
+					-z(k-\alpha)+\omega t+\frac{\pi}{2}
+				\right)+
+				\cos\left(
+					-z(k+\alpha)+\omega t-\frac{\pi}{2}
+					\right)
+			\right]
+			 % \\+ \phi_2\right
+			% E_z = 0
+		\end{cases}
+		% \quad\Rightarrow\quad
+		% \frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos\delta+\frac{E_y^2}{E_2^2}=\sin^2\delta
+	\end{gather*}
+	Представим через суперпозицию, где $k^R=k-\alpha$, $k^L=k+\alpha$:
+	\begin{gather*}
+		\begin{cases}
+		\begin{cases} 
+			E_x^R = \frac{A}{2}
+				\cos\left(
+					\omega t - k^Rz
+					\right)
+			\\
+			E_y^R = \frac{A}{2}
+				\cos\left(
+					\omega t - k^Rz +\frac{\pi}{2}
+					\right)
+		\end{cases}\vspace{0.5em}\\
+		\begin{cases} 
+			E_x^L = \frac{A}{2}
+				\cos\left(
+					\omega t - k^Lz
+					\right)
+			\\
+			E_y^L = \frac{A}{2}
+				\cos\left(
+					\omega t - k^Lz -\frac{\pi}{2}
+					\right)
+		\end{cases}			
+		\end{cases}
+		% \quad\Rightarrow\quad
+		% \frac{E_x^2}{E_1^2}-\frac{2E_xE_y}{E_1E_2}\cos\delta+\frac{E_y^2}{E_2^2}=\sin^2\delta
+	\end{gather*}
+	\begin{equation}
+		\omega=2\pi\nu,\quad
+		\lambda=\frac{2\pi}{\lambda},\quad\Rightarrow\quad
+		v=\lambda\nu=\frac{\omega}{k}
+	\end{equation}
+	Тогда выразим скорости и показатели преломления этих волн:
+\begin{gather*}
+	v_L=\frac{\omega}{k-\alpha},
+	\quad
+	v_R=\frac{\omega}{k+\alpha},
+	\quad
+	n_L=\frac{c}{v_L},
+	\quad
+	n_R=\frac{c}{v_L}
+\end{gather*}
+откуда 
+\begin{equation*}
+	n_L-n_R=\frac{2c}{\omega}\alpha
+\end{equation*}
+И окончательно
+\begin{equation*}
+	\alpha=\frac{\omega}{2c}(n_L-n_R)
+\end{equation*}
+\end{document}
